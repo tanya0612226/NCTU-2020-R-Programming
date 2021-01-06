@@ -61,7 +61,7 @@
                geom_line(aes(x=ID, y=單月確診量, col=2), stat = "identity") +
                labs(title="全球單月確診量", x ="月份", y = "確診數") + theme_bw() 
                
-   畫出的圖如下
+畫出的圖如下
    ![Image](https://images.plurk.com/21pvWPH8wxvr17i33l19yw.png)
    ![Image](https://images.plurk.com/2RLiB3YQlrwUUsXvSnjeO.png)
    ![Image](https://images.plurk.com/3yOInGz4vwEVAaAhZend9w.png)
@@ -79,7 +79,7 @@
           ggplot(country, aes(x = ID, y = 確診數, color=國家)) +geom_line()+
             labs(title="全球國家確診數曲線", x ="天數", y = "確診數")+theme_bw(
             
-     畫出的圖如下
+畫出的圖如下
    ![Image](https://images.plurk.com/5IydwoUauUXfT3MwEQN2eK.png)
    
  接著將國家分為四類:前三名、亞洲、歐美、南半球國家，再分別畫出確診曲線圖
@@ -97,11 +97,11 @@
           ggplot(country3, aes(x = ID, y = 確診數, color=國家)) +geom_line()+
             labs(title="南半球國家確診數曲線", x ="天數", y = "確診數")+theme_bw()
             
-    畫出的圖如下
+畫出的圖如下
    ![Image](https://images.plurk.com/5O9zMmRGg6aqwIM6HQQD7V.png)
-   ![Image](https://images.plurk.com/6mPj6TgoHTmAwTlkSqGuKC.png)
-   ![Image](https://images.plurk.com/6zY0e35BsznCfKH4G3IEp2.png)
-   ![Image](https://images.plurk.com/exTPdGCjZsyNKEcMSudVs.png) 
+   ![Image](https://images.plurk.com/FXvsHiNvVxmoNx4Qgx1wT.png)
+   ![Image](https://images.plurk.com/7byFGoOtbel71NFs2e2UAt.png)
+   ![Image](https://images.plurk.com/235V4iUrvc9dqT2aoE0FiF.png) 
 
 抓出各國的第一筆資料(12/31)，計算出各國的死亡率
 
