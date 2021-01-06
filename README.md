@@ -67,10 +67,53 @@
    ![Image](https://images.plurk.com/3yOInGz4vwEVAaAhZend9w.png)
    ![Image](https://images.plurk.com/3knO0aVUTNfbs87mnNkmKb.png)
 
-3.接著分析各國資料，並從數據中選取30國的數據
-
-EX
+3.接著分析各國資料，首先從數據中選取30國的數據。EX:
 
           TW = covid[covid$國家 == "TW/Taiwan", ]
           KR = covid[covid$國家 == "KR/Korea, Republic of", ]
           JP = covid[covid$國家 == "JP/Japan", ]
+          
+ 將30國的資料整合後，畫出各個國家的確診曲線圖
+ 
+           country <- rbind(TW, KR, JP, CN, IN, AU, NZ, ID, SG, RU, US, CA, BR, MX, PE, AR, CO, EG, ZA, TR, IR, GB, FR, DE, IT, ES, PL, UA, SE, NL)
+          ggplot(country, aes(x = ID, y = 確診數, color=國家)) +geom_line()+
+            labs(title="全球國家確診數曲線", x ="天數", y = "確診數")+theme_bw(
+            
+     畫出的圖如下
+   ![Image](https://images.plurk.com/5IydwoUauUXfT3MwEQN2eK.png)
+   
+ 接著將國家分為四類:前三名、亞洲、歐美、南半球國家，再分別畫出確診曲線圖
+ 
+           country0 <- rbind(US, BR, IN)
+          ggplot(country0, aes(x = ID, y = 確診數, color=國家)) +geom_line()+
+            labs(title="前三名國家確診數曲線", x ="天數", y = "確診數")+theme_bw()
+          country1 <- rbind(TW, KR, JP, CN, ID, SG, RU, TR, IR)
+          ggplot(country1, aes(x = ID, y = 確診數, color=國家)) +geom_line()+
+            labs(title="亞洲國家確診數曲線", x ="天數", y = "確診數")+theme_bw()
+          country2 <- rbind(CA, MX, GB, FR, DE, IT, ES, PL, UA, SE, NL)
+          ggplot(country2, aes(x = ID, y = 確診數, color=國家)) +geom_line()+
+            labs(title="歐美國家確診數曲線", x ="天數", y = "確診數")+theme_bw()
+          country3 <- rbind(AU, NZ, ZA, MX, PE, AR, CO)
+          ggplot(country3, aes(x = ID, y = 確診數, color=國家)) +geom_line()+
+            labs(title="南半球國家確診數曲線", x ="天數", y = "確診數")+theme_bw()
+            
+    畫出的圖如下
+   ![Image](https://images.plurk.com/5O9zMmRGg6aqwIM6HQQD7V.png)
+   ![Image](https://images.plurk.com/6mPj6TgoHTmAwTlkSqGuKC.png)
+   ![Image](https://images.plurk.com/6zY0e35BsznCfKH4G3IEp2.png)
+   ![Image](https://images.plurk.com/exTPdGCjZsyNKEcMSudVs.png) 
+
+抓出各國的第一筆資料(12/31)，計算出各國的死亡率
+
+          #死亡率=死亡數/確診數
+          TW_dr = TW$死亡數[1]/TW$確診數[1]
+          KR_dr = KR$死亡數[1]/KR$確診數[1]
+          JP_dr = JP$死亡數[1]/JP$確診數[1]
+
+計算完畢後，將死亡率的數據放入各國的數據中，並畫出長條圖做比較
+
+          country00 <- cbind(country00, 死亡率)
+          ggplot ( data = country00, aes( x = 國家, y = 死亡率 ) ) + geom_bar ( stat = "identity" ) + theme_bw()
+          
+畫出的圖如下
+   ![Image](https://images.plurk.com/253NqcytfdSEdeU5W24WhI.png)
