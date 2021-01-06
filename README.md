@@ -62,7 +62,7 @@
                labs(title="全球單月確診量", x ="月份", y = "確診數") + theme_bw() 
                
    畫出的圖如下
-   ![Image](https://images.plurk.com/12KpX2WYeXaZ3sbXL67yIv.png)
+   ![Image](https://images.plurk.com/21pvWPH8wxvr17i33l19yw.png)
    ![Image](https://images.plurk.com/2RLiB3YQlrwUUsXvSnjeO.png)
    ![Image](https://images.plurk.com/3yOInGz4vwEVAaAhZend9w.png)
    ![Image](https://images.plurk.com/3knO0aVUTNfbs87mnNkmKb.png)
