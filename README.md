@@ -70,6 +70,7 @@
 3.接著分析各國資料，並從數據中選取30國的數據
 
 EX
+
           TW = covid[covid$國家 == "TW/Taiwan", ]
           KR = covid[covid$國家 == "KR/Korea, Republic of", ]
           JP = covid[covid$國家 == "JP/Japan", ]
