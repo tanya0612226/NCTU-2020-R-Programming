@@ -53,13 +53,16 @@
 
           ggplot(world, aes(x = ID, y = 死亡率)) +geom_line()+
             labs(title="全球總死亡率曲線", x ="天數", y = "死亡率")+theme_bw()
-            
-   畫出的圖如下
-   
-            
+           
    再來挑選出全世界去年1到12月的總數據進行分析，並跟上述一樣用for迴圈先得出單月確診量後，畫出折線圖
   
             ggplot(data=world0) + 
                geom_point(aes(x=ID, y=單月確診量, col=2), stat = "identity") + 
                geom_line(aes(x=ID, y=單月確診量, col=2), stat = "identity") +
                labs(title="全球單月確診量", x ="月份", y = "確診數") + theme_bw() 
+               
+   畫出的圖如下
+   ![Image](https://images.plurk.com/12KpX2WYeXaZ3sbXL67yIv.png)
+   ![Image](https://images.plurk.com/2RLiB3YQlrwUUsXvSnjeO.png)
+   ![Image](https://images.plurk.com/3yOInGz4vwEVAaAhZend9w.png)
+   ![Image](https://images.plurk.com/3knO0aVUTNfbs87mnNkmKb.png)
