@@ -66,3 +66,8 @@
    ![Image](https://images.plurk.com/2RLiB3YQlrwUUsXvSnjeO.png)
    ![Image](https://images.plurk.com/3yOInGz4vwEVAaAhZend9w.png)
    ![Image](https://images.plurk.com/3knO0aVUTNfbs87mnNkmKb.png)
+
+3.接著分析各國資料，並從數據中選取30國的數據
+
+* 台灣 TW/Taiwan    * 韓國 KR/Korea, Republic of
+
