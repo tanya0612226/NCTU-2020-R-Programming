@@ -119,3 +119,40 @@
           
 畫出的圖如下
    ![Image](https://images.plurk.com/253NqcytfdSEdeU5W24WhI.png)
+   
+4.地圖繪製
+
+以下以總確診數為例
+
+首先將挑選的國家的資料挑出來(以台灣為例)，並每個月的資料相加以求出單月資料(可再進行其他運算)
+
+          TW = covid[covid$國家 == "TW/Taiwan", ]
+          Taiwan = TW[c(1,32,62,93,123,154,185,215,246,276,307,336), ]
+          Taiwan$ID = c(12:1)
+          Taiwan$region = "Taiwan"
+
+將挑選國家的資料合在一起，再按照月份分開
+
+                    contrys <- rbind(Taiwan, SouthKorea, Japan, China, India, Australia, NewZealand, Indonesia, Singapore, Russia, USA, Canada, Brazil, Mexico, Peru, Argentina, Colombia, Egypt, SouthAfrica, Turkey, Iran, UK, France, Germany, Italy, Spain, Poland, Ukraine, Sweden, Netherlands)
+                    countrys1 = contrys[contrys$ID == "1", ]
+                    countrys2 = contrys[contrys$ID == "2", ]
+                    countrys3 = contrys[contrys$ID == "3", ]
+
+載入Rstudio本身包含的世界地圖檔案
+
+          world_map <- map_data("world")
+
+將地圖檔和總確診數merge成同一個資料
+
+          map.plot1 <- merge(world_map, countrys1, by="region", all.x=T)
+          map.plot1 <- map.plot1[order(map.plot1$order), ]
+
+畫出世界地圖並以總確診數填色
+
+          ggplot(map.plot1, aes(x = long, y = lat, group = group, fill = 確診數)) + 
+            geom_polygon()+ 
+            scale_fill_gradient(low="black",high="red") + 
+            coord_equal()
+
+畫出的圖如下
+   ![Image](https://images.plurk.com/6yNGjAMcLxagneqGGgUvZo.gif)
