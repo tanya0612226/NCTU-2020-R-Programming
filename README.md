@@ -164,3 +164,46 @@
    ![Image](https://images.plurk.com/2wVvrJ36qrsQkWE5OWqNgN.gif)
    ![Image](https://images.plurk.com/2KzfNsTU63fHbrlUueDfoQ.gif)
    ![Image](https://images.plurk.com/u0JXl7eQFqNniABC3nTgE.gif) 
+
+### 線性回歸:
+
+將全球的疫情資料挑出並且用ID表示第幾天的疫情資料
+
+          world = covid[covid$國家 == "Total/Global", ]
+          world$ID = c(340:1)
+
+訓練集取2020年的倒數100天到倒數21天，測試集取2020年的最後20天，並取2021年的1月為預測集
+
+          train <- world[21:100,]
+          test <- world[1:20,]
+          esti <-world[1:31,]
+          esti$ID = c(371:341)
+          esti$檢核日期 = c(31:1)
+
+建立確診數的模型並畫圖
+
+          model = lm(確診數~ID, data=train)
+          predict(model, test)
+          predict(model, esti)
+          plot(train$確診數~train$ID, col="blue")
+          abline(model,col="red")
+          plot(test$確診數~test$ID, col="blue")
+          abline(model,col="red")
+
+預測結果(1/31~1/1)
+
+    ![Image](https://images.plurk.com/1BPm7vvMGDvJESlXXLlIep.png)
+ 
+建立死亡數的模型並畫圖
+
+          model2 = lm(死亡數~ID, data=train)
+          predict(model2, test)
+          predict(model2, esti)
+          plot(train$死亡數~train$ID, col="blue")
+          abline(model2,col="red")
+          plot(test$死亡數~test$ID, col="blue")
+          abline(model2,col="red")
+
+預測結果(1/31~1/1)
+ 
+    ![Image](https://images.plurk.com/5jolEM4vDHPbNOatfWwcvM.png)
