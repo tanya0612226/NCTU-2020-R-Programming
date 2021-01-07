@@ -155,4 +155,8 @@
             coord_equal()
 
 畫出的圖如下
+
    ![Image](https://images.plurk.com/6yNGjAMcLxagneqGGgUvZo.gif)
+   ![Image](https://images.plurk.com/2wVvrJ36qrsQkWE5OWqNgN.gif)
+   ![Image](https://images.plurk.com/2KzfNsTU63fHbrlUueDfoQ.gif)
+   ![Image](https://images.plurk.com/u0JXl7eQFqNniABC3nTgE.gif) 
