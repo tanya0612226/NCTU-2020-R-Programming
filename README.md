@@ -20,11 +20,11 @@
 
 ### 數據分析:
 
-# 1. 讀取數據資料
+#### 1. 讀取數據資料
 
           covid = read.csv("C://Users/Tanya/Desktop/covid1.csv", header=TRUE, encoding='big5')
           
-# 2. 世界資料分析
+#### 2. 世界資料分析
 
 從數據庫中挑出全世界的340筆數據
 
@@ -71,7 +71,7 @@
    ![Image](https://images.plurk.com/3yOInGz4vwEVAaAhZend9w.png)
    ![Image](https://images.plurk.com/3knO0aVUTNfbs87mnNkmKb.png)
 
-# 3.各國資料分析
+#### 3.各國資料分析
 
 從數據中選取30國的數據。EX:
 
@@ -124,7 +124,7 @@
 畫出的圖如下
    ![Image](https://images.plurk.com/253NqcytfdSEdeU5W24WhI.png)
    
-4.地圖繪製
+#### 4.地圖繪製
 
 以下以總確診數為例
 
