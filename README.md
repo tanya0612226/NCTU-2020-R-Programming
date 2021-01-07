@@ -20,11 +20,13 @@
 
 ### 數據分析:
 
-1. 讀取數據資料
+# 1. 讀取數據資料
 
           covid = read.csv("C://Users/Tanya/Desktop/covid1.csv", header=TRUE, encoding='big5')
           
-2. 首先分析全世界的資料，因此從數據庫中挑出全世界的340筆數據
+# 2. 世界資料分析
+
+從數據庫中挑出全世界的340筆數據
 
           world = covid[covid$國家 == "Total/Global", ]
           
@@ -69,7 +71,9 @@
    ![Image](https://images.plurk.com/3yOInGz4vwEVAaAhZend9w.png)
    ![Image](https://images.plurk.com/3knO0aVUTNfbs87mnNkmKb.png)
 
-3.接著分析各國資料，首先從數據中選取30國的數據。EX:
+# 3.各國資料分析
+
+從數據中選取30國的數據。EX:
 
           TW = covid[covid$國家 == "TW/Taiwan", ]
           KR = covid[covid$國家 == "KR/Korea, Republic of", ]
