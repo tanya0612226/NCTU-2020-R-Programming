@@ -191,7 +191,6 @@
           abline(model,col="red")
 
 預測結果(1/31~1/1)
-
     ![Image](https://images.plurk.com/1BPm7vvMGDvJESlXXLlIep.png)
  
 建立死亡數的模型並畫圖
@@ -205,5 +204,4 @@
           abline(model2,col="red")
 
 預測結果(1/31~1/1)
- 
     ![Image](https://images.plurk.com/5jolEM4vDHPbNOatfWwcvM.png)
