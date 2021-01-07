@@ -208,6 +208,6 @@
 
 預測結果(1/31~1/1)
 
-![Image](https://images.plurk.com/5jolEM4vDHPbNOatfWwcvM.png)
-![Image](https://images.plurk.com/5jolEM4vDHPbNOatfWwcvM.png)
+![Image](https://images.plurk.com/3TvOtG36pey5K9w37e6g9g.png)
+![Image](https://images.plurk.com/4fJEKh7QYCWwa5kGO7jF2D.png)
 ![Image](https://images.plurk.com/5jolEM4vDHPbNOatfWwcvM.png)
